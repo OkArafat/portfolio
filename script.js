@@ -17,6 +17,18 @@ document.querySelectorAll('.profile-btn').forEach(btn => {
   });
 });
 
+document.querySelectorAll('.social-icon').forEach(btn => {
+  btn.addEventListener('touchstart', function() {
+    btn.classList.add('touched');
+  });
+  btn.addEventListener('touchend', function() {
+    btn.classList.remove('touched');
+  });
+  btn.addEventListener('touchcancel', function() {
+    btn.classList.remove('touched');
+  });
+});
+
 const canvas = document.getElementById('bg-canvas');
 const ctx = canvas.getContext('2d');
 

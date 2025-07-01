@@ -66,7 +66,7 @@ body {
   position: absolute;
   left: 0; right: 0; bottom: 0;
   height: 70px;
-  background: linear-gradient(0deg, #4b3a2a 90%, transparent 100%);
+  background: linear-gradient(0deg, #000000 90%, transparent 100%);
   width: 100%;
   display: flex;
   align-items: flex-end;
@@ -82,14 +82,18 @@ body {
 .username {
   font-family: 'Barlow', Arial, sans-serif;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 2rem;
   margin-bottom: 4px;
   color: #ffffff;
 }
 .quote {
   font-family: 'Barlow', Arial, sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.28rem;
+  background: #000;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
 }
 .social-row {
   display: flex;
@@ -98,8 +102,8 @@ body {
   margin: 32px 0 40px 0;
 }
 .social-icon {
-  background: #fff;
-  color: #4b3a2a;
+  background: #ffffff;
+  color: #000000;
   border-radius: 50%;
   width: 48px;
   height: 48px;
@@ -112,8 +116,46 @@ body {
   transition: background 0.15s, color 0.15s;
 }
 .social-icon:hover {
-  background: #b0a8a0;
+  background: #d9d6d3;
   color: #000;
+}
+.social-icon.touched, .social-icon:active {
+  background: #fff;
+  /* Default fallback color, will be overridden by brand class */
+}
+.social-icon.touched.instagram i, .social-icon:active.instagram i {
+  color: #E4405F !important;
+  animation: rotate360 0.5s linear;
+  animation-fill-mode: forwards;
+  will-change: transform;
+}
+.social-icon.touched.facebook i, .social-icon:active.facebook i {
+  color: #1877F3 !important;
+  animation: rotate360 0.5s linear;
+  animation-fill-mode: forwards;
+  will-change: transform;
+}
+.social-icon.touched.snapchat i, .social-icon:active.snapchat i {
+  color: #FFFC00 !important;
+  animation: rotate360 0.5s linear;
+  animation-fill-mode: forwards;
+  will-change: transform;
+}
+.social-icon.touched.whatsapp i, .social-icon:active.whatsapp i {
+  color: #25D366 !important;
+  animation: rotate360 0.5s linear;
+  animation-fill-mode: forwards;
+  will-change: transform;
+}
+.social-icon.touched.linkedin i, .social-icon:active.linkedin i {
+  color: #0A66C2 !important;
+  animation: rotate360 0.5s linear;
+  animation-fill-mode: forwards;
+  will-change: transform;
+}
+@keyframes rotate360 {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 .profile-buttons {
   display: flex;
